@@ -1,0 +1,8 @@
+/Users/rodrigo/projects/picollo/level0/configurable-interface/src/main/java/org/picollo/config/api/ConfigType.java
+/Users/rodrigo/projects/picollo/level0/configurable-interface/src/main/java/org/picollo/config/service/Import.java
+/Users/rodrigo/projects/picollo/level0/configurable-interface/src/main/java/org/picollo/config/service/Export.java
+/Users/rodrigo/projects/picollo/level0/configurable-interface/src/main/java/org/picollo/config/api/ConfigurableInterface.java
+/Users/rodrigo/projects/picollo/level0/configurable-interface/src/main/java/org/picollo/config/service/OSGiConfig.java
+/Users/rodrigo/projects/picollo/level0/configurable-interface/src/main/java/org/picollo/config/api/ConfigurationException.java
+/Users/rodrigo/projects/picollo/level0/configurable-interface/src/main/java/org/picollo/config/service/Configurer.java
+/Users/rodrigo/projects/picollo/level0/configurable-interface/src/main/java/org/picollo/config/api/AbstractConfigurableInterface.java
