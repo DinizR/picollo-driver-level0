@@ -1,7 +1,0 @@
-Manifest-Version: 1.0
-Bundle-ManifestVersion: 2
-Bundle-Name: Driver-Interface 1.0.0
-Bundle-SymbolicName: org.picollo.interface.driver
-Bundle-Version: 1.0.0
-Export-Package: org.picollo.driver,org.picollo.context
-Driver-Type: Core
