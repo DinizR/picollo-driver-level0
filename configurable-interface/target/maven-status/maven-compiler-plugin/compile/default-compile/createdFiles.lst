@@ -1,9 +1,0 @@
-org/picollo/config/api/ConfigurableInterface.class
-org/picollo/config/api/ConfigType.class
-org/picollo/config/api/ConfigurationException.class
-org/picollo/config/api/AbstractConfigurableInterface$1.class
-org/picollo/config/api/AbstractConfigurableInterface.class
-org/picollo/config/service/Configurer.class
-org/picollo/config/service/Export.class
-org/picollo/config/service/Import.class
-org/picollo/config/service/OSGiConfig.class

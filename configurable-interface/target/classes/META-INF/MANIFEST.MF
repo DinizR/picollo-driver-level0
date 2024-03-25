@@ -1,8 +1,0 @@
-Manifest-Version: 1.0
-Bundle-ManifestVersion: 2
-Bundle-Name: Configurable-Interface 1.0.2
-Bundle-SymbolicName: org.picollo.interface.configurable
-Bundle-Version: 1.0.2
-Export-Package: org.picollo.config.api
-Import-Package: org.picollo.driver,org.picollo.context
-Driver-Type: Core
