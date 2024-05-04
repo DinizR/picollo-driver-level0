@@ -45,7 +45,7 @@ public class OSGiConfig {
 
     @PostConstruct
     public void init() {
-        final Map configMap = new HashMap();
+        final Map<String,String> configMap = new HashMap<>();
         final Iterator<FrameworkFactory> iterator = ServiceLoader.load(FrameworkFactory.class).iterator();
         final FrameworkFactory frameworkFactory = ServiceLoader.load(FrameworkFactory.class).iterator().next();
 

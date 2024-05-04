@@ -45,9 +45,9 @@ public abstract class AbstractConfigurableInterface implements ConfigurableInter
     private Logger connectorLogger;
     private FileTime fileDate;
     private ConfigType configType;
-    private Path configPath;
+    private final Path configPath;
     private Map<String,String> config = new HashMap<>();
-    private static org.slf4j.Logger logger = LoggerFactory.getLogger(AbstractConfigurableInterface.class);
+    private static final org.slf4j.Logger logger = LoggerFactory.getLogger(AbstractConfigurableInterface.class);
     private DriverState driverState = DriverState.STOPPED;
 
     public AbstractConfigurableInterface() throws ConfigurationException {
@@ -110,6 +110,8 @@ public abstract class AbstractConfigurableInterface implements ConfigurableInter
 
                     props.load(fis);
                     fis.close();
+
+
                     props.forEach( (k,v) -> config.put((String)k,(String)v) );
                     break;
             }
@@ -133,7 +135,7 @@ public abstract class AbstractConfigurableInterface implements ConfigurableInter
 
     private Logger configureLogger() throws IOException {
         final Path logPath = Paths.get(logConfigDir + File.separator + getName());
-        final Boolean logRootAdditive = Boolean.valueOf(getConfigValue(LOG_ROOT_ADDITIVE));
+        final boolean logRootAdditive = Boolean.parseBoolean(getConfigValue(LOG_ROOT_ADDITIVE));
         final Logger log;
         final LoggerContext logCtx = (LoggerContext) LoggerFactory.getILoggerFactory();
         final PatternLayoutEncoder logEncoder = new PatternLayoutEncoder();

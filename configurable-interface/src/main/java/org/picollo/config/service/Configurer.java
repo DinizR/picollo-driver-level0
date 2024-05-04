@@ -23,7 +23,7 @@ public class Configurer {
 
     @Scheduled(initialDelay = 30000, fixedDelay = 30000)
     public void config() {
-        List<ConfigurableInterface> workers = OSGiConfig.<List<ConfigurableInterface>,ConfigurableInterface>getDrivers(ConfigurableInterface.class);
+        final List<ConfigurableInterface> workers = OSGiConfig.<List<ConfigurableInterface>,ConfigurableInterface>getDrivers(ConfigurableInterface.class);
 
         workers
         .parallelStream()

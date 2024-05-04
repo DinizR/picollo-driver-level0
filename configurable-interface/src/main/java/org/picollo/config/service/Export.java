@@ -3,6 +3,8 @@
  */
 package org.picollo.config.service;
 
+import lombok.Data;
+import lombok.ToString;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.PropertySource;
@@ -17,31 +19,9 @@ import java.util.List;
 @Configuration
 @PropertySource("${ext.properties.dir:classpath:}/export.properties")
 @ConfigurationProperties("export")
+@Data
+@ToString
 class Export {
     private String version;
     private List<String> packages;
-
-    public String getVersion() {
-        return version;
-    }
-
-    public void setVersion(String version) {
-        this.version = version;
-    }
-
-    public List<String> getPackages() {
-        return packages;
-    }
-
-    public void setPackages(List<String> packages) {
-        this.packages = packages;
-    }
-
-    @Override
-    public String toString() {
-        return "Export{" +
-                "version='" + version + '\'' +
-                ", packages=" + packages +
-                '}';
-    }
 }
