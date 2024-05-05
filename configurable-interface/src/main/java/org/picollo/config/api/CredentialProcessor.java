@@ -16,7 +16,7 @@ import java.util.regex.Pattern;
 
 /**
  * This is a properties processor that matches the pattern "{{CredentialManager...}}"
- * on to process specific keys for safe credentials storage.
+ * on to process specific keys for safe credentials' storage.
  *
  * @author rodrigo
  * @since 2024-04
@@ -31,7 +31,7 @@ public class CredentialProcessor {
         properties
             .entrySet()
             .stream()
-            .filter(e -> pattern.matcher(e.getKey().toString()).find())
+            .filter(e -> pattern.matcher(e.getValue().toString()).find())
             .forEach(e -> processCredential(properties, e.getKey().toString(), e.getValue().toString()));
     }
 

@@ -23,17 +23,19 @@ public class Configurer {
 
     @Scheduled(initialDelay = 30000, fixedDelay = 30000)
     public void config() {
-        final List<ConfigurableInterface> workers = OSGiConfig.<List<ConfigurableInterface>,ConfigurableInterface>getDrivers(ConfigurableInterface.class);
+        final List<ConfigurableInterface> workers = OSGiConfig.<List<ConfigurableInterface>, ConfigurableInterface>getDrivers(ConfigurableInterface.class);
 
         workers
-        .parallelStream()
-        .filter( ConfigurableInterface::isConfigEnabled )
-        .forEach( c -> {
-            try {
-                c.loadConfig();
-            } catch (ConfigurationException e) {
-                log.error("Error Running Configuration Loader.",e);
-            }
-        } );
+            .parallelStream()
+            .filter(ConfigurableInterface::isConfigEnabled)
+            .forEach(
+                c -> {
+                    try {
+                        c.loadConfig();
+                    } catch (ConfigurationException e) {
+                        log.error("Error Running Configuration Loader.", e);
+                    }
+                }
+            );
     }
 }
