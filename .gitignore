@@ -33,6 +33,8 @@ replay_pid*
 
 # Dependency directories
 /target/
+**/target/
+**/target/*
 /lib/
 
 # OS-specific files
