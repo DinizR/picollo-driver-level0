@@ -14,4 +14,5 @@ public interface DriverInterface {
     String getDescription();
     DriverState getState();
     void setState(DriverState driverState);
+    void stop();
 }
