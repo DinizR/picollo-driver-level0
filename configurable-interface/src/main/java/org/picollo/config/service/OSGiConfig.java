@@ -72,7 +72,8 @@ public class OSGiConfig {
         try {
             osgi.start();
             Files.list(Paths.get(coreModules))
-                .filter(path -> !path.getFileName().toString().equalsIgnoreCase("README.md"))
+                .filter(path -> !path.getFileName().toString().equalsIgnoreCase("README.md")
+                        && ! path.getFileName().toString().equalsIgnoreCase(".DS_Store"))
                 .forEach( i -> {
                     try {
                         Bundle b = osgi.getBundleContext().installBundle(i.toString());
@@ -82,7 +83,8 @@ public class OSGiConfig {
                     }
                 });
             Files.list(Paths.get(serviceModules))
-                .filter(path -> !path.getFileName().toString().equalsIgnoreCase("README.md"))
+                .filter(path -> !path.getFileName().toString().equalsIgnoreCase("README.md")
+                    && ! path.getFileName().toString().equalsIgnoreCase(".DS_Store"))
                 .forEach( i -> {
                    try {
                        Bundle b = osgi.getBundleContext().installBundle(i.toString());
@@ -92,7 +94,8 @@ public class OSGiConfig {
                    }
                });
             Files.list(Paths.get(customModules))
-                .filter(path -> !path.getFileName().toString().equalsIgnoreCase("README.md"))
+                .filter(path -> !path.getFileName().toString().equalsIgnoreCase("README.md")
+                        && ! path.getFileName().toString().equalsIgnoreCase(".DS_Store"))
                 .forEach( i -> {
                     try {
                         Bundle b = osgi.getBundleContext().installBundle(i.toString());

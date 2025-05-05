@@ -10,7 +10,7 @@ import ch.qos.logback.classic.encoder.PatternLayoutEncoder;
 import ch.qos.logback.core.rolling.RollingFileAppender;
 import ch.qos.logback.core.rolling.TimeBasedRollingPolicy;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import org.picollo.context.CobraContext;
+import org.picollo.context.PicolloContext;
 import org.picollo.driver.DriverState;
 import org.slf4j.LoggerFactory;
 
@@ -54,7 +54,7 @@ public abstract class AbstractConfigurableInterface implements ConfigurableInter
         try {
             configPath = scanConfigFile();
             loadConfig();
-            CobraContext.registerDriver(getName(),this);
+            PicolloContext.registerDriver(getName(),this);
         } catch (IOException e) {
             logger.error("Configuration file for {} module has not been found.",getName(),e);
             throw new ConfigurationException("Configuration file for module has not been found.");
