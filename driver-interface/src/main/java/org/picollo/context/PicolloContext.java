@@ -1,5 +1,5 @@
 /*
-* CobraContext.java
+* PicolloContext.java
  */
 package org.picollo.context;
 
@@ -14,10 +14,10 @@ import java.util.Optional;
  * @author rod
  * @since 2019-05
  */
-public final class CobraContext {
+public final class PicolloContext {
     public static final Map<String, DriverInterface> installedDrivers = new HashMap<>();
 
-    private CobraContext() {
+    private PicolloContext() {
     }
 
     public static void registerDriver(String key, DriverInterface driver) {
